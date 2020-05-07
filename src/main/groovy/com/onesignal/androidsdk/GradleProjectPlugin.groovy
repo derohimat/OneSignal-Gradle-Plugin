@@ -165,52 +165,52 @@ class GradleProjectPlugin implements Plugin<Project> {
     static final Map<String, Map<String, Map<String, String>>> MODULE_DEPENDENCY_MINIMUMS = [
         'com.google.firebase:firebase-core': [
             '16.0.0': [
-                'com.google.firebase:firebase-messaging': '17.0.0'
+                'com.google.firebase:firebase-messaging': '20.1.6'
             ]
         ],
         'com.google.firebase:firebase-iid': [
             '16.2.0': [
-                'com.google.firebase:firebase-messaging': '17.1.0'
+                'com.google.firebase:firebase-messaging': '20.1.6'
             ],
             '17.0.0': [
-                'com.google.firebase:firebase-messaging': '17.3.0'
+                'com.google.firebase:firebase-messaging': '20.1.6'
             ],
             '17.0.1': [
-                'com.google.firebase:firebase-messaging': '17.3.1'
+                'com.google.firebase:firebase-messaging': '20.1.6'
             ],
             '17.1.0': [
-                'com.google.firebase:firebase-messaging': '17.4.0'
+                'com.google.firebase:firebase-messaging': '20.1.6'
             ],
             '17.1.1': [
-                'com.google.firebase:firebase-messaging': '17.5.0'
+                'com.google.firebase:firebase-messaging': '20.1.6'
             ],
             '17.1.2': [
-                'com.google.firebase:firebase-messaging': '17.6.0'
+                'com.google.firebase:firebase-messaging': '20.1.6'
             ],
             '18.0.0': [
-                'com.google.firebase:firebase-messaging': '18.0.0'
+                'com.google.firebase:firebase-messaging': '20.1.6'
             ],
             '19.0.1': [
-                'com.google.firebase:firebase-messaging': '19.0.1'
+                'com.google.firebase:firebase-messaging': '20.1.6'
             ],
             '20.0.0': [
-                'com.google.firebase:firebase-messaging': '20.0.0'
+                'com.google.firebase:firebase-messaging': '20.1.6'
             ],
             '20.1.0': [
-                'com.google.firebase:firebase-messaging': '20.1.1'
+                'com.google.firebase:firebase-messaging': '20.1.6'
             ],
             '20.1.1': [
-                'com.google.firebase:firebase-messaging': '20.1.1',
+                'com.google.firebase:firebase-messaging': '20.1.6',
                 'com.onesignal:OneSignal': '3.13.0'
             ],
             '20.1.2': [
-                'com.google.firebase:firebase-messaging': '20.1.1'
+                'com.google.firebase:firebase-messaging': '20.1.6'
             ],
             '20.1.4': [
-                'com.google.firebase:firebase-messaging': '20.1.4'
+                'com.google.firebase:firebase-messaging': '20.1.6'
             ],
             '20.1.5': [
-                'com.google.firebase:firebase-messaging': '20.1.4'
+                'com.google.firebase:firebase-messaging': '20.1.6'
             ]
         ],
         'com.google.android.gms:play-services-measurement-base': [
@@ -220,10 +220,10 @@ class GradleProjectPlugin implements Plugin<Project> {
         ],
         'com.google.android.gms:play-services-basement': [
             '16.0.1': [
-                'com.google.firebase:firebase-messaging': '17.3.3'
+                'com.google.firebase:firebase-messaging': '20.1.6'
             ],
             '17.0.0': [
-                'com.google.android.gms:play-services-base': '17.0.0'
+                'com.google.android.gms:play-services-base': '17.2.1'
             ]
         ]
     ]
@@ -565,7 +565,7 @@ class GradleProjectPlugin implements Plugin<Project> {
                 resolvedVersion = '12.0.1'
             // If the requested version is under 15 increase to version range that will include other libraries
             else if (isVersionBelow(version, GOOGLE_SEMANTIC_EXACT_VERSION))
-                resolvedVersion = '[15.0.0, 16.0.0)'
+                resolvedVersion = '[17.0.0, 20.2.0]'
             // The requested version is higher or contains 15.0.0 don't override
             else if (!moduleOverride && isVersionInOrHigher(version, GOOGLE_SEMANTIC_EXACT_VERSION))
                 return
